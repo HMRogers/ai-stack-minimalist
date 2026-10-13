@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>You're in — The AI Stack Minimalist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['"Space Grotesk"','Inter','sans-serif'] },
+      colors: { ink: '#0A0B0D', panel: '#111317', line: '#1F232A', accent: '#C6F432' },
+    } } };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { background:#0A0B0D; color:#E7E9EE; -webkit-font-smoothing:antialiased; }
+    .glow { box-shadow: 0 0 0 1px rgba(198,244,50,0.35), 0 20px 60px -20px rgba(198,244,50,0.35); }
+    .cta { transition: transform .15s ease, box-shadow .15s ease; }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -10px rgba(198,244,50,0.55); }
+  </style>
+</head>
+<body class="font-sans">
+  <main class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-16">
+    <div class="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+
+    <div class="relative w-full max-w-xl text-center">
+      <div class="mx-auto grid h-14 w-14 place-items-center rounded-full bg-accent text-ink">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+
+      <h1 class="mt-7 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">You're in.</h1>
+      <p class="mx-auto mt-4 max-w-md text-zinc-400 sm:text-lg">Thanks for buying <strong class="text-white">The AI Stack Minimalist</strong>. Your guide is ready to download below.</p>
+
+      <a href="/dl/427d91736cc60c00/ai-stack-minimalist.pdf" download="The-AI-Stack-Minimalist.pdf"
+         class="cta glow mt-9 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-accent px-6 py-4 text-base font-bold text-ink sm:w-auto sm:px-10 sm:text-lg">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+        Download the PDF
+      </a>
+      <p class="mt-3 text-xs text-zinc-500">PDF · 17 pages · Save it somewhere you'll find it again.</p>
+
+      <div class="mt-12 rounded-2xl border border-line bg-panel p-6 text-left sm:p-8">
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">Start here</p>
+        <ol class="mt-4 space-y-3 text-sm text-zinc-300">
+          <li class="flex gap-3"><span class="font-display font-bold text-accent">1</span>Read the Introduction and Module 1 (about 15 minutes).</li>
+          <li class="flex gap-3"><span class="font-display font-bold text-accent">2</span>Run the AI Overwhelm Audit and cancel one subscription today.</li>
+          <li class="flex gap-3"><span class="font-display font-bold text-accent">3</span>Work through the 24-Hour Quick-Start Checklist at the end.</li>
+        </ol>
+      </div>
+
+      <p class="mt-8 text-xs text-zinc-500">A receipt is on its way to your email from Stripe. <a href="/" class="underline decoration-zinc-600 underline-offset-4 hover:text-zinc-300">Back to the homepage</a></p>
+    </div>
+  </main>
+</body>
+</html>
