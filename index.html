@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The AI Stack Minimalist — Build a 3-App Workflow That Saves 10 Hours a Week</title>
+  <meta name="description" content="Cut the AI tool clutter. Build a lean, 3-app daily workflow that actually saves you 10 hours a week. Instant PDF access for $19." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            ink: '#0A0B0D',
+            panel: '#111317',
+            line: '#1F232A',
+            accent: '#C6F432',
+            accentdim: '#9BC21F',
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body { background: #0A0B0D; color: #E7E9EE; -webkit-font-smoothing: antialiased; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+    }
+    .glow { box-shadow: 0 0 0 1px rgba(198,244,50,0.35), 0 20px 60px -20px rgba(198,244,50,0.35); }
+    .cta { transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 40px -10px rgba(198,244,50,0.55); }
+    .cta:active { transform: translateY(0); }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .chev { transform: rotate(45deg); }
+    .chev { transition: transform .2s ease; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .cta:hover { transform: none; }
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- ============ STICKY NAV ============ -->
+  <header class="sticky top-0 z-50 border-b border-line/80 bg-ink/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+      <a href="#top" class="flex items-center gap-2 font-display text-sm font-semibold tracking-tight text-white sm:text-base">
+        <span class="grid h-7 w-7 place-items-center rounded-md bg-accent text-ink">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h10M4 17h6"/></svg>
+        </span>
+        AI Stack Minimalist
+      </a>
+      <a href="#pricing" class="cta rounded-full bg-accent px-4 py-2 text-xs font-bold text-ink sm:text-sm">Get it — $19</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden">
+      <div class="grid-bg pointer-events-none absolute inset-0"></div>
+      <div class="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-4xl px-4 pb-20 pt-16 text-center sm:px-6 sm:pt-24 md:pb-28">
+        <p class="mx-auto inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-accent sm:text-xs">
+          <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+          Stop paying for 10+ AI subscriptions you don't use
+        </p>
+
+        <h1 class="mt-7 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+          Cut the AI Tool Clutter.
+          <span class="block text-zinc-400">Build a Lean, <span class="text-accent">3-App</span> Daily Workflow That Actually Saves You <span class="whitespace-nowrap text-white underline decoration-accent decoration-4 underline-offset-8">10 Hours a Week.</span></span>
+        </h1>
+
+        <p class="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+          A no-fluff, step-by-step PDF guide for solopreneurs, remote workers, and creators who are drowning in AI tools — and still not getting more done.
+        </p>
+
+        <div class="mt-10 flex flex-col items-center gap-4">
+          <a href="#pricing" class="cta glow w-full rounded-xl bg-accent px-6 py-4 text-center text-base font-bold text-ink sm:w-auto sm:px-10 sm:text-lg">
+            Get The AI Stack Minimalist — Instant Access ($19)
+          </a>
+          <p class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-zinc-500 sm:text-sm">
+            <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Instant PDF download</span>
+            <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>One-time payment</span>
+            <span class="flex items-center gap-1.5"><svg class="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Set up in 24 hours</span>
+          </p>
+        </div>
+
+        <!-- Stack visual -->
+        <div class="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-3 text-left sm:grid-cols-3">
+          <div class="rounded-xl border border-line bg-panel p-5">
+            <p class="text-[11px] font-bold uppercase tracking-widest text-accent">01 · Reason</p>
+            <p class="mt-2 font-display text-lg font-semibold text-white">The Heavy-Lifter</p>
+            <p class="mt-1 text-sm text-zinc-400">Think, write, analyze.</p>
+          </div>
+          <div class="rounded-xl border border-line bg-panel p-5">
+            <p class="text-[11px] font-bold uppercase tracking-widest text-accent">02 · Automate</p>
+            <p class="mt-2 font-display text-lg font-semibold text-white">The Automator</p>
+            <p class="mt-1 text-sm text-zinc-400">Busywork runs without you.</p>
+          </div>
+          <div class="rounded-xl border border-line bg-panel p-5">
+            <p class="text-[11px] font-bold uppercase tracking-widest text-accent">03 · Remember</p>
+            <p class="mt-2 font-display text-lg font-semibold text-white">The Knowledge Brain</p>
+            <p class="mt-1 text-sm text-zinc-400">One source of truth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="border-t border-line bg-panel/40">
+      <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-red-400">The problem</p>
+          <h2 class="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+            You signed up for leverage.<br class="hidden sm:block" /> You got chaos.
+          </h2>
+          <p class="mt-5 text-zinc-400 sm:text-lg">
+            One app to write. One to summarize. One for research. One because someone online said it "changed everything." Each promised to save you time. Add it up honestly — the opposite happened.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-4 md:grid-cols-3">
+          <div class="reveal rounded-2xl border border-line bg-ink p-6">
+            <div class="grid h-11 w-11 place-items-center rounded-lg bg-red-500/10 text-red-400">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h3 class="mt-5 font-display text-xl font-semibold text-white">Software fatigue</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">You spend your mornings deciding <em>which</em> tool to open instead of doing the work. That's decision energy you should be spending on clients and output.</p>
+          </div>
+          <div class="reveal rounded-2xl border border-line bg-ink p-6">
+            <div class="grid h-11 w-11 place-items-center rounded-lg bg-red-500/10 text-red-400">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg>
+            </div>
+            <h3 class="mt-5 font-display text-xl font-semibold text-white">Subscription traps</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Five to eight tools at $10–$30 each quietly becomes <strong class="text-white">$100–$200 a month</strong> — for apps that overlap 70% in what they do. Some you haven't opened in weeks.</p>
+          </div>
+          <div class="reveal rounded-2xl border border-line bg-ink p-6">
+            <div class="grid h-11 w-11 place-items-center rounded-lg bg-red-500/10 text-red-400">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 6h7v5H4zM13 6h7v5h-7zM4 13h7v5H4zM13 13h7v5h-7z"/></svg>
+            </div>
+            <h3 class="mt-5 font-display text-xl font-semibold text-white">Tab-switching chaos</h3>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">Notes in one app, drafts in another, prompts in a third. Nothing talks to anything. Thirty switches a day and you've lost an hour before lunch.</p>
+          </div>
+        </div>
+
+        <div class="reveal mx-auto mt-12 max-w-2xl rounded-2xl border border-red-500/20 bg-red-500/5 p-6 text-center">
+          <p class="text-base text-zinc-300 sm:text-lg"><strong class="text-white">The real problem isn't your tools.</strong> It's that more tools means more logins, more inputs, more places for your work to hide. Complexity scales faster than capability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOLUTION ============ -->
+    <section class="border-t border-line">
+      <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <div class="reveal">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">The solution</p>
+            <h2 class="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+              Three apps. Three jobs. <span class="text-accent">80% less noise.</span>
+            </h2>
+            <p class="mt-5 text-zinc-400 sm:text-lg">
+              <strong class="text-white">The AI Stack Minimalist</strong> runs on one principle: the best AI stack is the <em>smallest</em> one that covers every job you actually do.
+            </p>
+            <p class="mt-4 text-zinc-400 sm:text-lg">
+              You'll strip your setup down to a lean 3-app architecture — one app to think, one to automate, one to remember — and connect them into a single daily workflow you can run on autopilot.
+            </p>
+            <a href="#pricing" class="cta mt-8 inline-block rounded-xl bg-accent px-6 py-3.5 font-bold text-ink">Get Instant Access — $19</a>
+          </div>
+
+          <div class="reveal rounded-2xl border border-line bg-panel p-6 sm:p-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-zinc-500">Where the 10 hours come from</p>
+            <ul class="mt-5 divide-y divide-line text-sm">
+              <li class="flex items-center justify-between py-3"><span class="text-zinc-300">Fewer app switches</span><span class="font-display font-semibold text-white">~3 hrs</span></li>
+              <li class="flex items-center justify-between py-3"><span class="text-zinc-300">Reusable prompt templates</span><span class="font-display font-semibold text-white">2.5 hrs</span></li>
+              <li class="flex items-center justify-between py-3"><span class="text-zinc-300">Automated capture &amp; follow-ups</span><span class="font-display font-semibold text-white">~2 hrs</span></li>
+              <li class="flex items-center justify-between py-3"><span class="text-zinc-300">Finding work in one place</span><span class="font-display font-semibold text-white">~1.5 hrs</span></li>
+              <li class="flex items-center justify-between py-3"><span class="text-zinc-300">Fewer "which tool?" decisions</span><span class="font-display font-semibold text-white">~1 hr</span></li>
+              <li class="flex items-center justify-between pt-4"><span class="font-semibold text-white">Per week</span><span class="font-display text-2xl font-bold text-accent">~10 hrs</span></li>
+            </ul>
+            <p class="mt-4 text-xs text-zinc-500">Typical estimates. Your audit in Module 1 shows your real numbers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MODULES ============ -->
+    <section id="modules" class="border-t border-line bg-panel/40">
+      <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">What's inside</p>
+          <h2 class="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl">4 modules. Zero fluff.<br class="hidden sm:block" /> Everything you need to rebuild your stack.</h2>
+        </div>
+
+        <div class="mt-14 space-y-5">
+          <!-- Module 1 -->
+          <article class="reveal grid gap-6 rounded-2xl border border-line bg-ink p-6 sm:p-8 md:grid-cols-[120px_1fr]">
+            <div class="font-display text-5xl font-bold text-accent/90 md:text-6xl">01</div>
+            <div>
+              <h3 class="font-display text-2xl font-semibold text-white">The AI Overwhelm Audit</h3>
+              <p class="mt-2 text-zinc-400">You can't simplify what you haven't measured. In under an hour, find exactly where your money and attention are leaking.</p>
+              <ul class="mt-5 grid gap-2.5 text-sm text-zinc-300 sm:grid-cols-2">
+                <li class="flex gap-2"><span class="text-accent">→</span>The full tool inventory worksheet</li>
+                <li class="flex gap-2"><span class="text-accent">→</span>The 5-question Keep-or-Cut test</li>
+                <li class="flex gap-2"><span class="text-accent">→</span>How to spot overlapping tools fast</li>
+                <li class="flex gap-2"><span class="text-accent">→</span>Your baseline spend &amp; savings tracker</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Module 2 -->
+          <article class="reveal grid gap-6 rounded-2xl border border-accent/30 bg-ink p-6 sm:p-8 md:grid-cols-[120px_1fr]">
+            <div class="font-display text-5xl font-bold text-accent/90 md:text-6xl">02</div>
+            <div>
+              <h3 class="font-display text-2xl font-semibold text-white">The Lean 3-App Architecture</h3>
+              <p class="mt-2 text-zinc-400">The core of the system. Three layers, one app each, wired into one loop.</p>
+              <div class="mt-5 grid gap-3 sm:grid-cols-3">
+                <div class="rounded-xl border border-line bg-panel p-4">
+                  <p class="font-display font-semibold text-white">The Heavy-Lifter</p>
+                  <p class="mt-1 text-xs leading-relaxed text-zinc-400">Your one reasoning app for writing, research, and analysis — with saved context so every chat starts at 80%.</p>
+                </div>
+                <div class="rounded-xl border border-line bg-panel p-4">
+                  <p class="font-display font-semibold text-white">The Automator</p>
+                  <p class="mt-1 text-xs leading-relaxed text-zinc-400">Moves data and triggers follow-ups without you. Includes your first 3 automations to build.</p>
+                </div>
+                <div class="rounded-xl border border-line bg-panel p-4">
+                  <p class="font-display font-semibold text-white">The Knowledge Brain</p>
+                  <p class="mt-1 text-xs leading-relaxed text-zinc-400">One searchable home for everything — with a 5-folder structure that never gets messy.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Module 3 -->
+          <article class="reveal grid gap-6 rounded-2xl border border-line bg-ink p-6 sm:p-8 md:grid-cols-[120px_1fr]">
+            <div class="font-display text-5xl font-bold text-accent/90 md:text-6xl">03</div>
+            <div>
+              <h3 class="font-display text-2xl font-semibold text-white">Plug-and-Play Daily Prompt Frameworks</h3>
+              <p class="mt-2 text-zinc-400">Stop writing prompts from scratch. Copy, fill in the brackets, and run.</p>
+              <ul class="mt-5 grid gap-2.5 text-sm text-zinc-300 sm:grid-cols-2">
+                <li class="flex gap-2"><span class="text-accent">→</span><span><strong class="text-white">Daily Command Center</strong> — plan your day in 5 minutes</span></li>
+                <li class="flex gap-2"><span class="text-accent">→</span><span><strong class="text-white">Deep Work Draft Engine</strong> — kill the blank page</span></li>
+                <li class="flex gap-2"><span class="text-accent">→</span><span><strong class="text-white">Content Repurposing Engine</strong> — 1 piece → a week of posts</span></li>
+                <li class="flex gap-2"><span class="text-accent">→</span><span><strong class="text-white">Bonus:</strong> The Prompt Upgrade Prompt</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Module 4 -->
+          <article class="reveal grid gap-6 rounded-2xl border border-line bg-ink p-6 sm:p-8 md:grid-cols-[120px_1fr]">
+            <div class="font-display text-5xl font-bold text-accent/90 md:text-6xl">04</div>
+            <div>
+              <h3 class="font-display text-2xl font-semibold text-white">Maintenance &amp; Future-Proofing</h3>
+              <p class="mt-2 text-zinc-400">A lean stack doesn't stay lean by accident. Keep it small and your data clean as new AI tools launch every week.</p>
+              <ul class="mt-5 grid gap-2.5 text-sm text-zinc-300 sm:grid-cols-2">
+                <li class="flex gap-2"><span class="text-accent">→</span>The 7 Rules Against Tool Creep</li>
+                <li class="flex gap-2"><span class="text-accent">→</span>Data hygiene &amp; naming conventions</li>
+                <li class="flex gap-2"><span class="text-accent">→</span>Weekly, monthly &amp; quarterly rhythm</li>
+                <li class="flex gap-2"><span class="text-accent">→</span>"Swap apps, not layers" future-proofing</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="reveal mt-12 text-center">
+          <a href="#pricing" class="cta inline-block w-full rounded-xl bg-accent px-6 py-4 text-base font-bold text-ink sm:w-auto sm:px-10 sm:text-lg">Get The AI Stack Minimalist — $19</a>
+          <p class="mt-3 text-sm text-zinc-500">Plus: the 24-Hour Quick-Start Checklist included.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING / VALUE STACK ============ -->
+    <section id="pricing" class="border-t border-line">
+      <div class="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28">
+        <div class="reveal mx-auto max-w-2xl text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">Get instant access</p>
+          <h2 class="mt-4 font-display text-3xl font-bold leading-tight text-white sm:text-4xl">Pay for this once.<br class="hidden sm:block" /> Cancel the subscriptions you don't need.</h2>
+        </div>
+
+        <div class="reveal glow mx-auto mt-12 max-w-xl overflow-hidden rounded-3xl border border-accent/40 bg-panel">
+          <div class="border-b border-line bg-accent/10 px-6 py-4 text-center">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">Everything you get</p>
+          </div>
+          <ul class="divide-y divide-line px-6 sm:px-8">
+            <li class="flex items-start justify-between gap-4 py-4"><span class="flex gap-3 text-zinc-200"><svg class="mt-0.5 h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>The AI Overwhelm Audit + checklist</span><span class="shrink-0 text-zinc-500 line-through">$19</span></li>
+            <li class="flex items-start justify-between gap-4 py-4"><span class="flex gap-3 text-zinc-200"><svg class="mt-0.5 h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>The Lean 3-App Architecture blueprint</span><span class="shrink-0 text-zinc-500 line-through">$29</span></li>
+            <li class="flex items-start justify-between gap-4 py-4"><span class="flex gap-3 text-zinc-200"><svg class="mt-0.5 h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>3 Plug-and-Play Prompt Frameworks + bonus</span><span class="shrink-0 text-zinc-500 line-through">$27</span></li>
+            <li class="flex items-start justify-between gap-4 py-4"><span class="flex gap-3 text-zinc-200"><svg class="mt-0.5 h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>Maintenance &amp; Future-Proofing system</span><span class="shrink-0 text-zinc-500 line-through">$12</span></li>
+            <li class="flex items-start justify-between gap-4 py-4"><span class="flex gap-3 text-zinc-200"><svg class="mt-0.5 h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg>24-Hour Quick-Start Checklist</span><span class="shrink-0 text-zinc-500 line-through">$10</span></li>
+          </ul>
+          <div class="border-t border-line px-6 py-8 text-center sm:px-8">
+            <p class="text-sm text-zinc-400">Total value: <span class="font-semibold text-zinc-300 line-through">$97</span></p>
+            <p class="mt-2 text-sm font-semibold uppercase tracking-widest text-zinc-400">Today's price</p>
+            <p class="mt-1 font-display text-7xl font-bold tracking-tight text-white">$19</p>
+            <p class="mt-1 text-sm text-accent">One-time purchase · No subscription</p>
+
+            <!-- Replace href="#" with your checkout link (Gumroad, Stripe, Lemon Squeezy, etc.) -->
+            <a href="#" id="buy" class="cta mt-7 block w-full rounded-xl bg-accent px-6 py-4 text-base font-bold text-ink sm:text-lg">
+              Get The AI Stack Minimalist — Instant Access ($19)
+            </a>
+            <p class="mt-4 flex items-center justify-center gap-2 text-xs text-zinc-500">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>
+              Secure checkout · Instant PDF download
+            </p>
+          </div>
+        </div>
+
+        <p class="reveal mx-auto mt-8 max-w-xl text-center text-sm text-zinc-500">Cancel just <strong class="text-zinc-300">one</strong> unused $20 subscription and this guide has paid for itself in a month.</p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="border-t border-line bg-panel/40">
+      <div class="mx-auto max-w-3xl px-4 py-20 sm:px-6 md:py-28">
+        <div class="reveal text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">FAQ</p>
+          <h2 class="mt-4 font-display text-3xl font-bold text-white sm:text-4xl">Questions, answered.</h2>
+        </div>
+
+        <div class="mt-12 space-y-3">
+          <details class="reveal group rounded-xl border border-line bg-ink p-5 open:border-accent/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">
+              What format is the guide in?
+              <span class="chev grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-accent">+</span>
+            </summary>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-400">It's a downloadable PDF you get instantly after purchase. Read it on your phone, tablet, or desktop. All prompt templates are formatted so you can copy and paste them straight into your AI app.</p>
+          </details>
+
+          <details class="reveal group rounded-xl border border-line bg-ink p-5 open:border-accent/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">
+              Do I need to buy expensive software?
+              <span class="chev grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-accent">+</span>
+            </summary>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-400">No. The whole point is the opposite. The guide helps you figure out which tools you already pay for are worth keeping — and which to cancel. Most readers end up spending <em>less</em> each month. You'll build the system with apps you likely already have, and every layer has free or low-cost options.</p>
+          </details>
+
+          <details class="reveal group rounded-xl border border-line bg-ink p-5 open:border-accent/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">
+              I'm not technical. Is this too advanced for me?
+              <span class="chev grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-accent">+</span>
+            </summary>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-400">Not at all. It's written for busy people, not engineers. If you can use a chat app and create a folder, you can follow every step. Advanced users get value too — the architecture and maintenance rules are what keep power users from drifting back into tool bloat.</p>
+          </details>
+
+          <details class="reveal group rounded-xl border border-line bg-ink p-5 open:border-accent/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">
+              Which AI apps does it recommend?
+              <span class="chev grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-accent">+</span>
+            </summary>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-400">The system is tool-agnostic. It gives example apps for each layer, but the focus is on the <em>role</em> each app plays. That means it keeps working even as the AI market changes — you swap apps, not your whole system.</p>
+          </details>
+
+          <details class="reveal group rounded-xl border border-line bg-ink p-5 open:border-accent/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">
+              How long does it take to set up?
+              <span class="chev grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-accent">+</span>
+            </summary>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-400">About 40 minutes to read and about 3 hours to implement, spread across 24 hours. The included Quick-Start Checklist walks you through it hour by hour.</p>
+          </details>
+
+          <details class="reveal group rounded-xl border border-line bg-ink p-5 open:border-accent/30">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-white">
+              Is this a subscription?
+              <span class="chev grid h-7 w-7 shrink-0 place-items-center rounded-full border border-line text-accent">+</span>
+            </summary>
+            <p class="mt-4 text-sm leading-relaxed text-zinc-400">No. It's a one-time $19 purchase. You keep the PDF forever. (It would be a little ironic otherwise.)</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="relative overflow-hidden border-t border-line">
+      <div class="pointer-events-none absolute -bottom-40 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"></div>
+      <div class="reveal relative mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 md:py-28">
+        <h2 class="font-display text-3xl font-bold leading-tight text-white sm:text-5xl">Less stack. More output.</h2>
+        <p class="mx-auto mt-5 max-w-xl text-zinc-400 sm:text-lg">Tools are temporary. Systems compound. Build yours in the next 24 hours.</p>
+        <a href="#pricing" class="cta glow mt-9 inline-block w-full rounded-xl bg-accent px-6 py-4 text-base font-bold text-ink sm:w-auto sm:px-10 sm:text-lg">
+          Get The AI Stack Minimalist — Instant Access ($19)
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-8 text-xs text-zinc-500 sm:flex-row sm:px-6">
+      <p>&copy; <span id="yr"></span> The AI Stack Minimalist. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-zinc-300">Privacy</a>
+        <a href="#" class="hover:text-zinc-300">Terms</a>
+        <a href="#" class="hover:text-zinc-300">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky buy bar -->
+  <div id="mbar" class="fixed inset-x-0 bottom-0 z-40 translate-y-full border-t border-line bg-ink/95 px-4 py-3 backdrop-blur transition-transform duration-300 sm:hidden">
+    <a href="#pricing" class="cta block w-full rounded-lg bg-accent py-3 text-center text-sm font-bold text-ink">Get Instant Access — $19</a>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // Mobile sticky bar: show after hero, hide over pricing
+    const bar = document.getElementById('mbar');
+    const pricing = document.getElementById('pricing');
+    const onScroll = () => {
+      const pastHero = window.scrollY > window.innerHeight * 0.8;
+      const r = pricing.getBoundingClientRect();
+      const overPricing = r.top < window.innerHeight && r.bottom > 0;
+      bar.style.transform = pastHero && !overPricing ? 'translateY(0)' : 'translateY(100%)';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  </script>
+</body>
+</html>
